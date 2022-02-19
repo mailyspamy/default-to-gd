@@ -22,3 +22,12 @@ In most cases, this is what you want.  However, if you're having issues with Ima
 
 = 1.0 (2012-12-12) =
 * First version
+
+OR
+
+Bypass GD Editor (whatever that even means)
+Some people report adding this to your functions.php helps:
+function use_gd_editor($array) {
+return array( 'WP_Image_Editor_GD', );
+}
+add_filter( 'wp_image_editors', 'use_gd_editor' );
